@@ -34,6 +34,7 @@ class StatusController implements ControllerProviderInterface
 
                 $result = $database->fetchAssoc('SELECT COUNT(*) as number FROM hits');
                 $output .= '<h1>'.$result['number'].' hits !</h1>';
+                $output .= '<p>Current server: '.$_SERVER['SERVER_ADDR'].'</p>';
 
                 $lastHits = $database->fetchAll('SELECT * FROM hits ORDER BY hits.hitTime DESC LIMIT 10');
                 $output .= '<h2>Last 10 hits</h2>';

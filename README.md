@@ -7,20 +7,27 @@ This application show how to setup, deploy, run & update a PHP application on a 
 Clone the repository and create the Flynn application:
 ```
 git clone https://github.com/sroze/tsuru-php-example.git
-tsuru app-create php-example
+tsuru app-create php-example php
 ```
 
-Add the PostgreSQL database resource:
+Using `app-info`, add the Git remote named `tsuru` and run deploy your application:
+```
+git push tsuru master
 ```
 
+Create a PostgreSQL instance by the way you want. This is an example with [postgresapi](https://github.com/guokr/tsuru-postgresapi) and a shared instance:
+```
+tsuru service-add postgresapi example-db
 ```
 
-Set the custom build pack (from Heroku):
+Bind the PostgreSQL database resource:
 ```
-tsuru env-set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-php
+tsuru service-bind example-db
 ```
 
-Deploy your application:
+## Scale
+
+You can also scale your application by adding units (here it'll add 2 more units):
 ```
-git push flynn master
+tsuru unit-add 2
 ```
