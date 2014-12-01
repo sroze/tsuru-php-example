@@ -4,7 +4,7 @@ This application show how to setup, deploy, run & update a PHP application on a 
 
 ## Getting started
 
-Clone the repository and create the Flynn application:
+Clone the repository and create the Tsuru application:
 ```
 git clone https://github.com/sroze/tsuru-php-example.git
 tsuru app-create php-example php
