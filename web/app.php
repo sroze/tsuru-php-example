@@ -10,10 +10,11 @@ $app->register(new DoctrineServiceProvider(), array(
     'db.options' => array(
         'driver'   => 'pdo_pgsql',
         'host'      => getenv('PG_HOST'),
+        'port'      => intval(getenv('PG_PORT')),
         'dbname'    => getenv('PG_DATABASE'),
         'user'      => getenv('PG_USER'),
         'password'  => getenv('PG_PASSWORD'),
-        'charset'   => 'utf8',
+        'charset'   => 'utf8'
     ),
 ));
 
