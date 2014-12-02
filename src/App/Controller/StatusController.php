@@ -48,6 +48,8 @@ class StatusController implements ControllerProviderInterface
             } catch (\Exception $e) {
                 $output .= '<p>[EXCEPTION] '.$e->getMessage().'</p>';
                 $output .= '<pre>'.$e->getTraceAsString().'</pre>';
+                $output .= '<hr />';
+                $output .= '<pre>'.print_r($app['db.options'], true).'</pre>';
 
                 $status = 500;
             }
