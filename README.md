@@ -20,6 +20,11 @@ Create a PostgreSQL instance by the way you want. This is an example with [postg
 tsuru service-add postgresapi example-db
 ```
 
+Here's an example for a dedicated instance:
+```
+tsuru service-add postgresapi example-db dedicated
+```
+
 Bind the PostgreSQL database resource:
 ```
 tsuru service-bind example-db
