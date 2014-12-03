@@ -1,7 +1,0 @@
-hooks:
-    build:
-        - sudo cp conf/apache-vhost.conf /etc/apache2/sites-enabled/tsuru-vhost.conf
-        - sudo a2enmod rewrite
-        - sudo service apache2 restart
-        - wget --quiet http://getcomposer.org/composer.phar -O composer.phar && chmod +x composer.phar
-        - ./composer.phar install
