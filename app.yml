@@ -1,6 +1,6 @@
 php:
     frontend:
-        name: nginx
+        name: apache
 
     interpretor:
         name: fpm54
