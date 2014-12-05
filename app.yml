@@ -1,12 +1,8 @@
 php:
     frontend:
-        name: apache-mod-php
-        options:
-            vhost_file: conf/apache-vhost.conf
-            modules:
-                - rewrite
+        name: nginx
 
-hooks:
-    build:
-        - wget --quiet http://getcomposer.org/composer.phar -O composer.phar && chmod +x composer.phar
-        - ./composer.phar install
+    interpretor:
+        name: fpm54
+
+    composer: true
