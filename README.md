@@ -15,7 +15,7 @@ Using `app-info`, add the Git remote named `tsuru` and run deploy your applicati
 git push tsuru master
 ```
 
-Create a PostgreSQL instance by the way you want. This is an example with [postgresapi](https://github.com/guokr/tsuru-postgresapi) and a shared instance:
+Create a PostgreSQL instance by the way you want. This is an example with [postgresapi](https://github.com/tsuru/postgres-api) and a shared instance:
 ```
 tsuru service-add postgresapi example-db
 ```
