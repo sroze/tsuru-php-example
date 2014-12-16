@@ -1,3 +1,8 @@
-apache:
-    modules:
-        - rewite
+php:
+    frontend:
+        name: apache
+
+    interpretor:
+        name: fpm54
+
+    composer: true
